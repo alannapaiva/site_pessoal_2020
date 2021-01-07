@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url('../img/fundo2.png');
+    background-size: auto 100vh;
+    font-family: 'Source Code Pro', monospace;
+    height: 100vh;
+    font-size: 12px;
+  }
+  
+  /* Se a tela tver pelo menos 400px, vai carregar estes estilos*/
+  @media (min-width: 400px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  /*breakpoint*/
+  @media (min-width: 600px) {
+    body {
+      font-size: 18px;
+    }
+  }
+  /*breakpoint*/
+  @media (min-width: 1200px) {
+    body {
+      font-size: 20px;
+    }
+  }
+  
+  header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .img-me{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 325px;
+    width: 245px;
+    border-radius: 10%;
+    padding-top: 0em;
+  }
+
+
+  .menu {
+    background-color:rgba(71, 67, 67, 0.87);
+    position: fixed;
+    width: 100vw;
+    top: 0;
+  }
+  
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu li {
+    list-style: none;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 10px 20px;
+  }
+  
+  a{
+    color: #DAA520;
+    text-decoration: none;
+  }
+  
+  a:hover{
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .site-subtitle, 
+  .site-title {
+    color: whitesmoke;
+    text-align: center;
+  }
+  
+  
+  .site-title {
+    font-size: 4em;
+    font-family: 'Parisienne', cursive;
+    /*font-family: 'Parisienne', cursive;*/
+  }
+  
+  .site-subtitle { /*controla o espaçamento entre as linhas de um texto.A distância é medida entre as linhas de base (baseline) de duas linhas consecutivas*/
+    
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.8em;
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .projetos{
+    padding: 2em;
+    height: 100vh;
+  }
+  .projetos h2{
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 2em;
+    font-size: 1.8em;
+    color: whitesmoke;
+  }
+  
+  .projetos .grid{
+    display: grid;
+    gap: 2em;
+    
+  }
+  /*breakpoint - a partir de 560px vai formar duas colunas de 240px*/
+  @media (min-width: 560px){
+    .projetos .grid{
+      grid-template-columns: 240px 240px;
+    }
+  }
+  
+  /*breakpoint- a partir de 880px vai fomrar 3 colunas de 240px*/
+  @media (min-width: 880px){
+    .projetos .grid{
+      grid-template-columns: repeat(3, 260px); /* função para por o mesmo valor para as 3 colunas*/
+      align-content: center;
+      justify-content: center;
+      height: calc(100vh - 8em - 48px);
+    }
+  }
+  
+  .projetos figure{
+    text-align: center;
+    color: whitesmoke;
+  }
+  
+  .img-projetos {
+    height: 180px;
+    width: 240px;
+    border-radius: 10%;
+    object-fit: cover;
+    object-position: left bottom;
+    
+  }
+  
+.sobre {
+  padding: 2em;
+  color: whitesmoke;
+  font-family: monospace;
+}
+
+.sobre h2{
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 1.5em;
+  margin-top: 5em;
+  font-size: 1.8em;
+  color: whitesmoke;
+}
+
+.sobre h4{
+  margin-bottom: 0.5em;
+  font-size: 1.0em;
+  color: whitesmoke;
+
+}
+
+.contato , .icons{
+  text-align: center;
+}
+
+.contato a{
+  color: whitesmoke;
+  font-size: 4em;
+  transition: text-shadow 2s;
+}
+ 
+.contato a:active,  /*active serve para fazer o hover no celular*/
+.contato a:hover{
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgba(255,255,255, 0.5);
+}
+
